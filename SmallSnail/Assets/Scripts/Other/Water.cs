@@ -15,15 +15,15 @@ public class Water : Outplace
     {
         gameObject.transform.position = new Vector3(gameObject.transform.position.x - 0.1f, gameObject.transform.position.y, 0);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent(typeof(Cube)) as Cube != null)
+        if (collision.GetComponent(typeof(Cube)) as Cube != null)
         {            
             Respawn();
         }
-        if (collision.gameObject.GetComponent(typeof(Snail)) as Snail != null)
+        if (collision.GetComponent(typeof(Snail)) as Snail != null)
         {
-            collision.gameObject.GetComponent<Snail>().Deas();   
+            collision.GetComponent<Snail>().Deas();   
         }
     }
 }
