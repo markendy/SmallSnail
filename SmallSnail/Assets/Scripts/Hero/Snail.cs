@@ -9,7 +9,9 @@ public class Snail : MonoBehaviour
     public Action DeltaHealsHendler;
     public bool IsNotProtect;
     private float _speed;
+    private float _mul;
     public float Speed { get; set; }
+    public float Mul { get; set; }
     private int _heals;
     public float startX;
     public int Heals
@@ -17,14 +19,20 @@ public class Snail : MonoBehaviour
         get => _heals;
         set
         {
-            if (value <= 0)
+            if (value >= 10)
             {
-                if (DeasHendler != null)
-                    DeasHendler();
-            //deas?
-            transform.position = new Vector3(30, 30, 0);
+                _heals = 10;
             }
-            _heals = value;
+            else
+            {
+                if (value <= 0)
+                {
+                    if (DeasHendler != null)
+                        DeasHendler();
+                    Deas();
+                }
+                _heals = value;
+            }
             if (DeltaHealsHendler != null)
                 DeltaHealsHendler();
         }
@@ -32,7 +40,8 @@ public class Snail : MonoBehaviour
     private void Start()
     {
         startX = gameObject.transform.position.x;
-        Speed = 0.012f;
+        Speed = 0.01f;
+        Mul = 0.1f;
         Heals = 5;
         IsNotProtect = true;
     }
@@ -46,7 +55,7 @@ public class Snail : MonoBehaviour
         {
             if (gameObject.transform.position.x < startX)
             {
-                transform.position = new Vector3(gameObject.transform.position.x + Speed * 1.5f, gameObject.transform.position.y + Speed * 1.5f * AOutplace.tg20def, 0);
+                transform.position = new Vector3(gameObject.transform.position.x + Speed * Mul, gameObject.transform.position.y + Speed * Mul * AOutplace.tg20def, 0);
             }
         }
     }
@@ -55,20 +64,22 @@ public class Snail : MonoBehaviour
         --Heals;
     }
 
-    public void Deas(){
-        Heals = 0;
+    public void Deas()
+    {
+        transform.position = new Vector3(0, 10, 0);
     }
 
     public void Protect()
     {
         IsNotProtect = !IsNotProtect;
-        //temp!!! change to delta texture
+        //!!!>temp; change to delta texture
         Vector3 vec;
         if (IsNotProtect)
             vec = new Vector3(1f, 1f, 0);
         else
             vec = new Vector3(0.7f, 0.7f, 0);
         transform.localScale = vec;
+        //temp<!!!
         if (DeltaStatusHendler != null)
             DeltaStatusHendler();
     }

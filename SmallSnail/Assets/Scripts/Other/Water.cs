@@ -8,7 +8,7 @@ public class Water : AOutplace
     {
         base.Start();
         this.tg = 0;
-        this.Speed = -Speed * 2.1f;
+        this.Speed = -Speed * 1.65f;
     }
     protected override void Coll(GameObject gameObjectLocal)
     {

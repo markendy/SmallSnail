@@ -8,6 +8,13 @@ public class ADrop : AOutplace
     {
         base.Start();
     }
+    protected override void Update()
+    {
+        
+    }
+    protected void UpdateParent(){
+        base.Update();
+    }
     protected virtual void Execude(GameObject gameObjectLocal, int n)
     {
 

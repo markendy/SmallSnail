@@ -10,6 +10,10 @@ public class TeaLeavers : ADrop
         base.Start();
         addMoney = 5;
     }
+    protected override void Update()
+    {
+        base.UpdateParent();
+    }
     protected override void Execude(GameObject gameObjectLocal, int n)
     {
         switch(n){
