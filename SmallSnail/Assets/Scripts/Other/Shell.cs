@@ -13,7 +13,8 @@ public class Shell : ADrop
     }
     protected override void Update()
     {
-        base.UpdateParent();
+        if(!active)
+            base.UpdateParent();
     }
     protected void FixedUpdate()
     {

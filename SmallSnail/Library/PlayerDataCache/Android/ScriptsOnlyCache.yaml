@@ -74,35 +74,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12096}
     - Class: 114
-      Script: {instanceID: 12346}
+      Script: {instanceID: 12198}
     - Class: 114
-      Script: {instanceID: 12804}
+      Script: {instanceID: 12348}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 12806}
     - Class: 114
-      Script: {instanceID: 13084}
+      Script: {instanceID: 12870}
     - Class: 114
-      Script: {instanceID: 13324}
+      Script: {instanceID: 13086}
     - Class: 114
-      Script: {instanceID: 14306}
+      Script: {instanceID: 13326}
     - Class: 114
-      Script: {instanceID: 14408}
+      Script: {instanceID: 14308}
     - Class: 114
-      Script: {instanceID: 14822}
+      Script: {instanceID: 14410}
     - Class: 114
-      Script: {instanceID: 14864}
+      Script: {instanceID: 14798}
     - Class: 114
-      Script: {instanceID: 14970}
+      Script: {instanceID: 14826}
     - Class: 114
-      Script: {instanceID: 15046}
+      Script: {instanceID: 14868}
     - Class: 114
-      Script: {instanceID: 15082}
+      Script: {instanceID: 14974}
     - Class: 114
-      Script: {instanceID: 15092}
+      Script: {instanceID: 15050}
     - Class: 114
-      Script: {instanceID: 23232}
+      Script: {instanceID: 15086}
     - Class: 114
-      Script: {instanceID: 33154}
+      Script: {instanceID: 15096}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -218,6 +218,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 9c4a5018deade4693d9770224980748e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Coin
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -550,6 +556,12 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: d7bfffea7e664769bdd3472969c36096
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Shell
+  - hash:
+      serializedVersion: 2
       Hash: ac83951a641f8425e70a92531fd4f63f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -668,19 +680,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 9c4a5018deade4693d9770224980748e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Coin
-  - hash:
-      serializedVersion: 2
-      Hash: d7bfffea7e664769bdd3472969c36096
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Shell
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/Games/SmallSnail/SmallSnail/Builds/SmallSnailV12.apk
+  playerPath: E:/Games/SmallSnail/SmallSnail/Builds/SmallSnailV13.apk
