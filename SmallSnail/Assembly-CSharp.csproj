@@ -40,13 +40,15 @@
      <Compile Include="Assets\Scripts\Other\ADrop.cs" />
      <Compile Include="Assets\Scripts\Other\Stone.cs" />
      <Compile Include="Assets\Scripts\Hero\GMoney.cs" />
+     <Compile Include="Assets\Scripts\Other\SlimeCan.cs" />
      <Compile Include="Assets\Scripts\Other\AOutplace.cs" />
      <Compile Include="Assets\Scripts\Other\ExitCube.cs" />
      <Compile Include="Assets\Scripts\Hero\HealsPanel.cs" />
      <Compile Include="Assets\Scripts\Other\Ground.cs" />
      <Compile Include="Assets\Scripts\Hero\Snail.cs" />
      <Compile Include="Assets\Scripts\Other\Water.cs" />
-     <Compile Include="Assets\Scripts\Other\SlimeCan.cs" />
+     <Compile Include="Assets\Scripts\Other\Coin.cs" />
+     <Compile Include="Assets\Scripts\Other\Shell.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

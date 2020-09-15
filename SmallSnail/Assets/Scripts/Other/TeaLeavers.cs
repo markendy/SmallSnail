@@ -8,13 +8,13 @@ public class TeaLeavers : ADrop
     protected override void Start()
     {
         base.Start();
-        addMoney = 5;
+        addMoney = 2;
     }
     protected override void Update()
     {
         base.UpdateParent();
     }
-    protected override void Execude(GameObject gameObjectLocal, int n)
+    public override void Execude(GameObject gameObjectLocal, int n)
     {
         switch(n){
             case 1:

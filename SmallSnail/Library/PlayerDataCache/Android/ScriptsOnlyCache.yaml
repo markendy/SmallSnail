@@ -1,10 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Coin
     - ExitCube
     - GMoney
     - Ground
     - HealsPanel
+    - Shell
     - SlimeCan
     - Snail
     - Stone
@@ -14,6 +16,8 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.CollabProxy.Editor.dll:
@@ -95,6 +99,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15082}
     - Class: 114
       Script: {instanceID: 15092}
+    - Class: 114
+      Script: {instanceID: 23232}
+    - Class: 114
+      Script: {instanceID: 33154}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -660,7 +668,19 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 9c4a5018deade4693d9770224980748e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Coin
+  - hash:
+      serializedVersion: 2
+      Hash: d7bfffea7e664769bdd3472969c36096
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Shell
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/Games/SmallSnail/SmallSnail/Builds/SmallSnailV1.apk
+  playerPath: E:/Games/SmallSnail/SmallSnail/Builds/SmallSnailV12.apk

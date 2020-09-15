@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 public class ADrop : AOutplace
 {
-    protected int addMoney = 10;
+    protected int addMoney = 3;
     protected override void Start()
     {
         base.Start();
     }
     protected override void Update()
     {
-        
+
     }
-    protected void UpdateParent(){
+    protected void UpdateParent()
+    {
         base.Update();
     }
-    protected virtual void Execude(GameObject gameObjectLocal, int n)
+    public virtual void Execude(GameObject gameObjectLocal, int n)
     {
 
     }

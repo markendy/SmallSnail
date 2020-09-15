@@ -6,14 +6,13 @@ public class SlimeCan : ADrop
 {
     public Snail player;
     public GameObject imgTime;
-    private int _addHp = 1;
     private bool _active = false;
     public float time = 0f;
-    private float _maxTime = 150f;
+    private float _maxTime = 150;
     protected override void Start()
     {
         base.Start();
-        addMoney = 5;
+        addMoney = 2;
         imgTime.GetComponent<Image>().fillAmount = time / _maxTime;
     }
     protected override void Update()
@@ -25,7 +24,7 @@ public class SlimeCan : ADrop
         if (_active)
         {
             --time;
-            player.Mul = 1.75f;
+            player.Mul = 1.5f;
         }
         if (time <= 0){
             player.Mul = 0.1f;
@@ -33,7 +32,7 @@ public class SlimeCan : ADrop
         }
         imgTime.GetComponent<Image>().fillAmount = time / _maxTime;
     }
-    protected override void Execude(GameObject gameObjectLocal, int n)
+    public override void Execude(GameObject gameObjectLocal, int n)
     {
         switch (n)
         {
