@@ -5,16 +5,18 @@ using UnityEngine.UI;
 using System;
 public class GMoney : MonoBehaviour
 {
-    [SerializeField] private Text moneyText;
-    [SerializeField] private double _money;
+    public Text moneyText;
+    private double _money;
     public double Money
     {
         get {return _money;}
         set
         {
+            if (value < int.MaxValue && value > int.MinValue){                
             _money = value;
             if (DeltaMoneyHendler != null)
                 DeltaMoneyHendler();
+            }
         }
     }
     public Action DeltaMoneyHendler;
@@ -25,7 +27,7 @@ public class GMoney : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Money += 0.1;
+        Money += 0.05;
     }
     private void DrawMoney()
     {

@@ -1,24 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class Stone : AOutplace
+public class Stone : ADrop
 {
-    
-    private void OnCollisionEnter2D(Collision2D collider)
+    protected override void Execude(GameObject gameObjectLocal, int n)
     {
-        if (collider.gameObject.GetComponent(typeof(Snail)) as Snail != null)
-        {
-            if(collider.gameObject.GetComponent<Snail>().IsNotProtect){
-                collider.gameObject.GetComponentInParent<Snail>().TakeDamage();
-            }
-            else{
-                collider.gameObject.GetComponentInParent<GMoney>().Money += 10;
-            }
-            Respawn();
-        }
-        if (collider.gameObject.GetComponent(typeof(Cube)) as Cube != null)
-        {
-            GoToTemp();
+        switch(n){
+            case 1:
+                gameObjectLocal.GetComponent<Snail>().TakeDamage();
+                break;
+            case 2:
+                gameObjectLocal.GetComponent<GMoney>().Money += addMoney;
+                break;
         }
     }
 }

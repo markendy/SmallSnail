@@ -8,9 +8,9 @@ public class Snail : MonoBehaviour
     public Action DeltaStatusHendler;
     public Action DeltaHealsHendler;
     public bool IsNotProtect;
-    [SerializeField] private float _speed;
+    private float _speed;
     public float Speed { get; set; }
-    [SerializeField] private int _heals;
+    private int _heals;
     public float startX;
     public int Heals
     {
@@ -21,7 +21,8 @@ public class Snail : MonoBehaviour
             {
                 if (DeasHendler != null)
                     DeasHendler();
-            transform.position = new Vector3(30, 30, 0);//deas?    
+            //deas?
+            transform.position = new Vector3(30, 30, 0);
             }
             _heals = value;
             if (DeltaHealsHendler != null)
@@ -31,7 +32,7 @@ public class Snail : MonoBehaviour
     private void Start()
     {
         startX = gameObject.transform.position.x;
-        Speed = 2;
+        Speed = 0.012f;
         Heals = 5;
         IsNotProtect = true;
     }
@@ -39,13 +40,13 @@ public class Snail : MonoBehaviour
     {
         if (!IsNotProtect)
         {
-            transform.position = new Vector3(gameObject.transform.position.x - 0.02f, gameObject.transform.position.y - 0.02f * Outplace.tg20def, 0);
+            transform.position = new Vector3(gameObject.transform.position.x - Speed, gameObject.transform.position.y - Speed * AOutplace.tg20def, 0);
         }
         else
         {
             if (gameObject.transform.position.x < startX)
             {
-                transform.position = new Vector3(gameObject.transform.position.x + 0.04f, gameObject.transform.position.y + 0.04f * Outplace.tg20def, 0);
+                transform.position = new Vector3(gameObject.transform.position.x + Speed * 1.5f, gameObject.transform.position.y + Speed * 1.5f * AOutplace.tg20def, 0);
             }
         }
     }
@@ -61,6 +62,7 @@ public class Snail : MonoBehaviour
     public void Protect()
     {
         IsNotProtect = !IsNotProtect;
+        //temp!!! change to delta texture
         Vector3 vec;
         if (IsNotProtect)
             vec = new Vector3(1f, 1f, 0);

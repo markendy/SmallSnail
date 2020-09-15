@@ -6,17 +6,17 @@ using System;
 
 public class HealsPanel : MonoBehaviour
 {
-    [SerializeField] private Text _textHP;
-    [SerializeField] private Snail _snail;
+    public Text textHP;
+    public Snail snail;
 
     private void Start()
     {
-        _snail.DeltaHealsHendler += DrawHP;
+        snail.DeltaHealsHendler += DrawHP;
         DrawHP();
     }
 
     private void DrawHP()
     {
-        _textHP.text = _snail.Heals.ToString();
+        textHP.text = snail.Heals.ToString();
     }
 }

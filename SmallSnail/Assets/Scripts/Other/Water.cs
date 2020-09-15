@@ -2,28 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Water : Outplace
+public class Water : AOutplace
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-
+        base.Start();
+        this.tg = 0;
+        this.Speed = -Speed * 2.1f;
     }
-
-    // Update is called once per frame
-    public override void Update()
+    protected override void Coll(GameObject gameObjectLocal)
     {
-        gameObject.transform.position = new Vector3(gameObject.transform.position.x - 0.1f, gameObject.transform.position.y, 0);
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.GetComponent(typeof(Cube)) as Cube != null)
-        {            
-            Respawn();
-        }
-        if (collision.GetComponent(typeof(Snail)) as Snail != null)
+        base.Coll(gameObjectLocal);
+        if (gameObjectLocal.GetComponent(typeof(Snail)) as Snail != null)
         {
-            collision.GetComponent<Snail>().Deas();   
+            gameObjectLocal.gameObject.GetComponent<Snail>().Deas();
         }
     }
 }
