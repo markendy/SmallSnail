@@ -12,7 +12,7 @@ public class SlimeCan : ADrop
     protected override void Start()
     {
         base.Start();
-        addMoney = 2;
+        addMoney = 4;
         imgTime.GetComponent<Image>().fillAmount = time / _maxTime;
     }
     protected override void Update()

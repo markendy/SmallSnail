@@ -7,7 +7,7 @@ public class Coin : ADrop
     protected override void Start()
     {
         base.Start();
-        addMoney = 5;
+        addMoney = 10;
     }
     protected override void Update()
     {
