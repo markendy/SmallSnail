@@ -33,6 +33,7 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
@@ -85,6 +86,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13086}
     - Class: 114
       Script: {instanceID: 13326}
+    - Class: 114
+      Script: {instanceID: 13590}
     - Class: 114
       Script: {instanceID: 14308}
     - Class: 114
@@ -683,4 +686,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/Games/SmallSnail/SmallSnail/Builds/SmallSnailV13.apk
+  playerPath: E:/Games/SmallSnail/SmallSnail/Builds/SmallSnailV152.apk

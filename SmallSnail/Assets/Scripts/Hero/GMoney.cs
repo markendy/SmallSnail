@@ -27,7 +27,7 @@ public class GMoney : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Money += 0.01;
+        Money += 0.025;
     }
     private void DrawMoney()
     {

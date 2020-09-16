@@ -41,7 +41,7 @@ public class Snail : MonoBehaviour
     {
         startX = gameObject.transform.position.x;
         Speed = 0.02f;
-        Mul = 0.1f;
+        Mul = 0.05f;
         Heals = 5;
         IsNotProtect = true;
     }
@@ -83,9 +83,11 @@ public class Snail : MonoBehaviour
         if (DeltaStatusHendler != null)
             DeltaStatusHendler();
     }
+    //test
     public void AllRespawn(){
         transform.position = new Vector3(1.11f, -0.4f, 0);
-        Heals = 5;
+        if (Heals <= 0)
+            Heals = 5;
         GameObject.Find("Stone").GetComponent<ADrop>().Respawn();
         GameObject.Find("TeaLeaver").GetComponent<ADrop>().Respawn();
         GameObject.Find("SlimeCan").GetComponent<ADrop>().Respawn();
@@ -93,4 +95,13 @@ public class Snail : MonoBehaviour
         GameObject.Find("Shell").GetComponent<ADrop>().Respawn();
         GameObject.Find("Stone (1)").GetComponent<ADrop>().Respawn();
     }
+    public void StopAll(){
+        GameObject.Find("Stone").GetComponent<ADrop>().GoToTemp();
+        GameObject.Find("TeaLeaver").GetComponent<ADrop>().GoToTemp();
+        GameObject.Find("SlimeCan").GetComponent<ADrop>().GoToTemp();
+        GameObject.Find("Coin").GetComponent<ADrop>().GoToTemp();
+        GameObject.Find("Shell").GetComponent<ADrop>().GoToTemp();
+        GameObject.Find("Stone (1)").GetComponent<ADrop>().GoToTemp();
+    }
+    //end test
 }
