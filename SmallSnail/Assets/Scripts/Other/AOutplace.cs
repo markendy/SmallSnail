@@ -5,7 +5,7 @@ public class AOutplace : MonoBehaviour
 {
     public float tg = 0.363970234f;
     public readonly static float tg20def = 0.363970234f;
-    private float _speed = 0.04f;
+    private float _speed = 0.06f;
     public float Speed { get => _speed; set { _speed = value; } }
     public GameObject spawnObj;
     private GameObject _tempSpawnObj;
