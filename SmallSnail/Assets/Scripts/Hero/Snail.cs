@@ -8,6 +8,7 @@ public class Snail : MonoBehaviour
     public Action DeltaStatusHendler;
     public Action DeltaHealsHendler;
     public bool IsNotProtect;
+    public bool INP{ get => IsNotProtect; set {IsNotProtect = value;}}
     private float _speed;
     private float _mul;
     public float Speed { get; set; }
@@ -68,18 +69,16 @@ public class Snail : MonoBehaviour
     {
         transform.position = new Vector3(0, 10, 0);
     }
-
     public void Protect()
     {
-        IsNotProtect = !IsNotProtect;
-        //!!!>temp; change to delta texture
-        Vector3 vec;
-        if (IsNotProtect)
-            vec = new Vector3(1f, 1f, 0);
-        else
-            vec = new Vector3(0.7f, 0.7f, 0);
-        transform.localScale = vec;
-        //temp<!!!
+        IsNotProtect = false;
+        GetComponent<Animator>().Play("Protect");
+        if (DeltaStatusHendler != null)
+            DeltaStatusHendler();
+    }
+    public void UnProtect(){
+        IsNotProtect = true;
+        GetComponent<Animator>().Play("Stay");
         if (DeltaStatusHendler != null)
             DeltaStatusHendler();
     }
@@ -92,7 +91,7 @@ public class Snail : MonoBehaviour
         GameObject.Find("TeaLeaver").GetComponent<ADrop>().Respawn();
         GameObject.Find("SlimeCan").GetComponent<ADrop>().Respawn();
         GameObject.Find("Coin").GetComponent<ADrop>().Respawn();
-        GameObject.Find("Shell").GetComponent<ADrop>().Respawn();
+        //GameObject.Find("Shell").GetComponent<ADrop>().Respawn();
         GameObject.Find("Stone (1)").GetComponent<ADrop>().Respawn();
     }
     public void StopAll(){
